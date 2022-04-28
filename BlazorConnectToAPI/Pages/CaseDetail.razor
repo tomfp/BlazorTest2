@@ -1,0 +1,57 @@
+﻿@page "/casedetail/{FpCaseId}"
+
+
+@if (Case == null)
+{
+    if (ApiError == null)
+    {
+        <p><em>Loading ...</em></p>
+    }
+    else
+    {
+        <p><em>@ApiError</em></p>
+    }
+}
+else
+{
+    <h1 class="page-title">Details for @Case.Reference</h1>
+
+    <div class="col-12 row">
+        <div class="col-2">
+        </div>
+        <div class="col-10 row">
+            <div class="col-xs-12 col-sm-8>">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Id</label>
+                    <div class="col-sm-8">
+                        <lable type="text" class="form-control-plaintext">@Case.Id</lable>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Reference</label>
+                    <div class="col-sm-8">
+                        <lable type="text" class="form-control-plaintext">@Case.Reference</lable>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Name</label>
+                    <div class="col-sm-8">
+                        <lable type="text" class="form-control-plaintext">@Case.Name</lable>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Date</label>
+                    <div class="col-sm-8">
+                        <lable type="text" class="form-control-plaintext">@Case.InstructionDate</lable>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Files Location</label>
+                    <div class="col-sm-8">
+                        <lable type="text" class="form-control-plaintext">@Case.Folder</lable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
